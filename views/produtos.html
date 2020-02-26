@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerenciamento de Produtos</title>
+        <link rel="stylesheet" href="../resources/css/main.css"/>
+        <link rel="stylesheet" href="../resources/jquery/datatables.css"/>
+        <link rel="stylesheet" href="../resources/bootstrap/css/bootstrap.css"/>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <form>
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">
+                                Cadastrar novo produto
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Lote</div>
+                                    </div>
+                                    <input class="form-control" name="lote" placeholder="Exemplo: XXXXXXX" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Descrição</div>
+                                    </div>
+                                    <input class="form-control" name="description" placeholder="Adicione uma descrição/nome ao produto" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Valor</div>
+                                    </div>
+                                    <input class="form-control" name="value" placeholder="Digite o preço do produto" type="number" min="0.00" step="0.10" required>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-success col-4 offset-4">Cadastrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <table class="table" id="mainTable">
+                        <thead>
+                            <tr>
+                                <th>Lote</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mainTableBody">
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Lote</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="../resources/jquery/jQuery.js"></script>
+        <script src="../resources/jquery/datatables.js"></script>
+        <script src="../resources/bootstrap/js/bootstrap.js"></script>
+
+        <script>
+            $(document).ready(() => {
+                $("#mainTable").dataTable();
+            });
+        </script>
+    </body>
+</html>
