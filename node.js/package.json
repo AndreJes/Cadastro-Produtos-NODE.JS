@@ -1,0 +1,14 @@
+{
+    "name": "test-project",
+    "version": "1.0.0",
+    "description": "Teste node.js para cadastro de produtos",
+    "main": "start.js",
+    "private": true,
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "consign": "^0.1.6",
+        "express": "^4.17.1",
+        "express-validator": "^6.4.0",
+        "nedb": "^1.8.0"
+    }
+}
